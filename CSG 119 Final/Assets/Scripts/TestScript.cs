@@ -14,6 +14,7 @@ public class TestScript : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(TestScript))]
 public class TestScriptEditor : Editor
 {
@@ -34,3 +35,4 @@ public class TestScriptEditor : Editor
         }
     }
 }
+#endif
