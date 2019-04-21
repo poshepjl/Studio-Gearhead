@@ -6,38 +6,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("List of Enemies")]
     public List<GameObject> enemies = new List<GameObject>();
 
-    public float delay;
-
-    public float initialDelay;
-
-    private bool waiting = true;
-
-    private IEnumerator Start()
+    //spawns the enemies
+    public void Spawn()
     {
-        yield return new WaitForSeconds(initialDelay);
-        waiting = false;
-    }
+        //pick a random enemy
+        int n = Random.Range(0, enemies.Count);
 
-    private void Update()
-    {
-        if (waiting == false)
-        {
-            StartCoroutine(SpawnDelay());
-        }
-    }
-
-    private IEnumerator SpawnDelay()
-    {
-        waiting = true;
-        Spawn();
-        yield return new WaitForSeconds(delay);
-        waiting = false;
-    }
-
-    private void Spawn()
-    {
-        Debug.Log("SPAWN");
+        //instantiate the picked enemy
+        GameObject e = Instantiate(enemies[n], transform.position, Quaternion.identity);
     }
 }
