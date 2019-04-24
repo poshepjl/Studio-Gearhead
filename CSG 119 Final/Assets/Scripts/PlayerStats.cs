@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public float maxHealth;
-    public float currentHealth;
+    [HideInInspector] public float currentHealth;
 
     public Slider healthSlider;
 
