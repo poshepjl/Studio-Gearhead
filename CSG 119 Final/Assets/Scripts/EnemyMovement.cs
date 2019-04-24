@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            other.GetComponent< GetComponent<EnemyStats>().damage
         }
     }
 }

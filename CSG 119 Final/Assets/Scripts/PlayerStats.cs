@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerStats : MonoBehaviour
+{
+    public float maxHealth;
+    [HideInInspector] public float currentHealth;
+
+    public Slider healthSlider;
+
+    public float score;
+
+    public Text scoreText;
+    public Slider scoreSlider;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    public void UpdateHealthSlider()
+    {
+        healthSlider.value = currentHealth;
+    }
+
+    public void UpdateScoreSlider()
+    {
+        scoreSlider.value = score;
+    }
+}
