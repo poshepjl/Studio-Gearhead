@@ -13,7 +13,6 @@ public class PlayerStats : MonoBehaviour
     public float score;
 
     public Text scoreText;
-    public Slider scoreSlider;
 
     private void Start()
     {
@@ -25,8 +24,8 @@ public class PlayerStats : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
-    public void UpdateScoreSlider()
+    public void UpdateScore()
     {
-        scoreSlider.value = score;
+        scoreText.text = score.ToString();
     }
 }

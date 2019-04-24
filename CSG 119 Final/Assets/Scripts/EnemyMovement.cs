@@ -10,9 +10,12 @@ public class EnemyMovement : MonoBehaviour
 
     private bool canMove = false;
 
+    private GameObject player;
+
     private void Awake()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerPosition = player.GetComponent<Transform>().position;
 
         transform.LookAt(playerPosition);
 
@@ -35,7 +38,27 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponent< GetComponent<EnemyStats>().damage
+            player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage;
+            player.GetComponent<PlayerStats>().UpdateHealthSlider();
+            Destroy(gameObject);
         }
+
+        if (other.gameObject.tag == "Shield")
+        {
+            player.GetComponent<PlayerStats>().score += GetComponent<EnemyStats>().scoreValue;
+            player.GetComponent<PlayerStats>().UpdateScore();
+            Destroy(gameObject);
+        }
+    }
+
+    public void DestroyEnemy()
+    {
+        StartCoroutine(DestroyDelay());
+    }
+
+    IEnumerator DestroyDelay()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }
