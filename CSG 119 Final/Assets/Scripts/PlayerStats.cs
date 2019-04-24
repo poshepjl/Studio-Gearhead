@@ -19,6 +19,11 @@ public class PlayerStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    private void Update()
+    {
+        scoreText.text = score.ToString();
+    }
+
     public void UpdateHealthSlider()
     {
         healthSlider.value = currentHealth;
