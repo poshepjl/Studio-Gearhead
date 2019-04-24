@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentPass: {fileID: 0}
   isActive: 0
-  activeLength: 1
+  activeLength: 2
 --- !u!33 &1062582525
 MeshFilter:
   m_ObjectHideFlags: 0
