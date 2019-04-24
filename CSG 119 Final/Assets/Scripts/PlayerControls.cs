@@ -21,23 +21,4 @@ public class PlayerControls : MonoBehaviour
     {
         transform.localEulerAngles = new Vector3(0, valueMove.value, 0);
     }
-
-    public void UseAbility1()
-    {
-        abilities[1].SetActive(true);
-        abilities[1].SetActive(false);
-
-    }
-    public void UseAbility2()
-    {
-
-    }
-    public void UseAbility3()
-    {
-
-    }
-    public void UseAbility4()
-    {
-
-    }
 }
