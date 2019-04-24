@@ -22,7 +22,9 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         if (canMove)
+        {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 
     private IEnumerator MoveDelay()
