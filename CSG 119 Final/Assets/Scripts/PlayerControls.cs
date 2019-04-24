@@ -9,8 +9,8 @@ public class PlayerControls : MonoBehaviour
     public int health = 1;
     public int playerScore;
 
-    [Header("Player Abilitys")]
-    public GameObject[] abilitys; //1 - Shield //2 - //3 - //4- //5-
+    [Header("Player Abilities")]
+    public GameObject[] abilities; //1 - Shield //2 - //3 - //4- //5-
 
     [Header("Player Components")]
     public Slider valueMove;
@@ -20,8 +20,8 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        abilitys[0] = transform.GetChild(0).gameObject;
-        abilitys[1] = transform.GetChild(0).gameObject;
+        //abilities[0] = transform.GetChild(0).gameObject;
+        //abilities[1] = transform.GetChild(0).gameObject;
     }
 
     private void Update()
@@ -36,8 +36,8 @@ public class PlayerControls : MonoBehaviour
 
     public void UseAbility1()
     {
-        abilitys[1].SetActive(true);
-        abilitys[1].SetActive(false);
+        abilities[1].SetActive(true);
+        abilities[1].SetActive(false);
 
     }
     public void UseAbility2()
