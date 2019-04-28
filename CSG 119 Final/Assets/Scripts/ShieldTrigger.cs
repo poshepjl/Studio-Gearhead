@@ -16,6 +16,7 @@ public class ShieldTrigger : MonoBehaviour
         if (other.transform.root.name != "Player")
         {
             Destroy(other.gameObject);
+            Debug.Log("Shield // " + Time.time);
         }
     }
 }

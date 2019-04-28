@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruction : MonoBehaviour
+public class TargetModification : MonoBehaviour
 {
-    public SphereCollider effuxA;
+    public BoxCollider effuxA;
     public bool isActive;
     public float activeLength;
 
     void Start()
     {
-        effuxA = GetComponent<SphereCollider>();
+        effuxA = GetComponent<BoxCollider>();
         if (effuxA.enabled == true)
             effuxA.enabled = false;
     }
-    public void UseDestruction()
+    public void UseTargetModification()
     {
         if (isActive == false)
         {
@@ -29,12 +29,8 @@ public class Destruction : MonoBehaviour
         {
             if (other.transform.root.name != "Player")
             {
-                if (other.GetComponent<EnemyMovement>() != null)
-                {
-                    Destroy(other.gameObject);
-                    Debug.Log("Destruction // " + Time.time);
-                    //Bool Function True
-                }
+                    other.GetComponent<EnemyMovement>().halfDamage = true;
+                    Debug.Log("Target Modification // " + Time.time);
             }
         }
     }

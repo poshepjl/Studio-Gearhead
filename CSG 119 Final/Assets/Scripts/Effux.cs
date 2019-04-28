@@ -33,6 +33,7 @@ public class Effux : MonoBehaviour
                 {
                     EnemyMovement em = other.GetComponent<EnemyMovement>();
                     em.speed = -em.speed;
+                    Debug.Log("Efflux // " + Time.time);
                     //Bool Function True
                 }
             }

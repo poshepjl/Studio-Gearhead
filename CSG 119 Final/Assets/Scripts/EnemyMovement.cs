@@ -12,6 +12,8 @@ public class EnemyMovement : MonoBehaviour
 
     private GameObject player;
 
+    public bool halfDamage;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -40,7 +42,10 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage;
+            if (halfDamage == true)
+                player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage / 2;
+            else
+                player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage;
             player.GetComponent<PlayerStats>().UpdateHealthSlider();
             Destroy(gameObject);
         }
