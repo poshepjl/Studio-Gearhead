@@ -1368,8 +1368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fbb47c6f3269c4f8ef98d79f9814c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPanels: []
-  startPanel: {fileID: 0}
+  UIPanels:
+  - {fileID: 1896619323}
+  - {fileID: 1222536705}
+  startPanel: {fileID: 1896619323}
 --- !u!1 &1059541783
 GameObject:
   m_ObjectHideFlags: 0
