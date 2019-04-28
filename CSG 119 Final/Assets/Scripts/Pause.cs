@@ -21,6 +21,7 @@ public class Pause : MonoBehaviour
 
     public void MainMenu()
     {
+        UnpauseGame();
         SceneManager.LoadScene("Main Menu");
     }
 }
