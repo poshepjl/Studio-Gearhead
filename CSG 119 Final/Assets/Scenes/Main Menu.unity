@@ -1354,7 +1354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1048734730
 MonoBehaviour:
@@ -1368,8 +1368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fbb47c6f3269c4f8ef98d79f9814c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPanels: []
-  startPanel: {fileID: 0}
+  UIPanels:
+  - {fileID: 1896619323}
+  - {fileID: 1222536705}
+  startPanel: {fileID: 1896619323}
 --- !u!1 &1059541783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2043444162
 GameObject:
