@@ -54,7 +54,6 @@ public class EnemyMovement : MonoBehaviour
         {
             player.GetComponent<PlayerStats>().score += GetComponent<EnemyStats>().scoreValue;
             player.GetComponent<PlayerStats>().UpdateScore();
-            Destroy(gameObject);
         }
     }
 
