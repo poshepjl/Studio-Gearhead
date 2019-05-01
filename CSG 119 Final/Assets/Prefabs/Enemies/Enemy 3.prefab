@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 507674917}
   m_Layer: 0
   m_Name: Enemy 3
-  m_TagString: Enemy
+  m_TagString: Yellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   playerPosition: {x: 0, y: 0, z: 0}
+  halfDamage: 0
 --- !u!114 &507674917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,3 +203,4 @@ MonoBehaviour:
   damage: 15
   speed: 1.25
   scoreValue: 15
+  enemyType: 0

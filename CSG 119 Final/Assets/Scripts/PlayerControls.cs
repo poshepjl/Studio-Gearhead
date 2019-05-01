@@ -5,17 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
-    [Header("Player Abilities")]
-    public GameObject[] abilities; //1 - Shield //2 - //3 - //4- //5-
-
     [Header("Player Components")]
     public Slider valueMove;
-
-    void Start()
-    {
-        //abilities[0] = transform.GetChild(0).gameObject;
-        //abilities[1] = transform.GetChild(0).gameObject;
-    }
 
     public void ConvertMove()
     {

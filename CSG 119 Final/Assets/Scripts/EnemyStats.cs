@@ -7,4 +7,6 @@ public class EnemyStats : MonoBehaviour
     public float damage;
     public float speed;
     public float scoreValue;
+    public int enemyType;
+
 }

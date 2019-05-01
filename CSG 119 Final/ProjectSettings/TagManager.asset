@@ -7,6 +7,9 @@ TagManager:
   - Manager
   - Enemy
   - Shield
+  - Blue
+  - Yellow
+  - Green
   layers:
   - Default
   - TransparentFX
