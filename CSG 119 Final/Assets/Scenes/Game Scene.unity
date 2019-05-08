@@ -1025,14 +1025,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2842508187681233107}
         m_MethodName: ChangeScene
-        m_Mode: 2
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: 2fd737e912fee2a4d881b0a8b425a51a,
-            type: 3}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2093,14 +2092,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2842508187681233107}
         m_MethodName: ChangeScene
-        m_Mode: 2
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: 302373a3f00d61a4ba5f44d0d26572f8,
-            type: 3}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Game Scene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2598,6 +2596,11 @@ PrefabInstance:
       propertyPath: shieldColor
       value: 
       objectReference: {fileID: 8555707645638044252}
+    - target: {fileID: 982654663451880799, guid: 242cdff7dc31cd94da877950e70e4c4e,
+        type: 3}
+      propertyPath: valueMove
+      value: 
+      objectReference: {fileID: 8555707645463451615}
     - target: {fileID: 982654663451880789, guid: 242cdff7dc31cd94da877950e70e4c4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2653,11 +2656,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 982654663451880799, guid: 242cdff7dc31cd94da877950e70e4c4e,
-        type: 3}
-      propertyPath: valueMove
-      value: 
-      objectReference: {fileID: 8555707645463451615}
     - target: {fileID: 982654663451880798, guid: 242cdff7dc31cd94da877950e70e4c4e,
         type: 3}
       propertyPath: healthSlider

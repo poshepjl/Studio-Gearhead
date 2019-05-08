@@ -15,7 +15,7 @@ public class TutorialScript : MonoBehaviour
         if (current < 5)
             current++;
         else
-            SceneManager.LoadScene(yolo.name);
+            SceneManager.LoadScene("Main Menu");
 
 
         switchImage.sprite = tutorialSprites[current];

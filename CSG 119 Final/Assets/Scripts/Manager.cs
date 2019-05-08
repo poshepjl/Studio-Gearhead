@@ -12,8 +12,8 @@ public class Manager : MonoBehaviour
         gameOverCanvas.SetActive(true);
     }
 
-    public void ChangeScene(Object scene)
+    public void ChangeScene(string yolo)
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(yolo);
     }
 }
