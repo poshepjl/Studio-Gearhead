@@ -21,5 +21,13 @@ public class EnemyDeathAnimation : MonoBehaviour
     {
         dead = true;
         anim.SetBool("dead", dead);
+        StartCoroutine(TorrelsYeetFix());
+    }
+    IEnumerator TorrelsYeetFix()
+    {
+        var info = anim.GetCurrentAnimatorClipInfo(0);
+        yield return new WaitForSeconds(1.017f);
+        Debug.Log(info.Length);
+        Destroy(gameObject);
     }
 }

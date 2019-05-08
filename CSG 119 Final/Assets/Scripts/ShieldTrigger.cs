@@ -62,12 +62,13 @@ public class ShieldTrigger : MonoBehaviour
                 enemyState = ShieldState.Blue;
                 if (shieldState == enemyState)
                 {
+                    other.gameObject.GetComponent<SphereCollider>().enabled = false;
+                    other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    other.gameObject.GetComponent<EnemyMovement>().enabled = false;
                     other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
                     other.gameObject.GetComponent<EnemyMovement>().speed = 0;
 
                     yield return new WaitForSeconds(1);
-
-                    Destroy(other.gameObject);
                     Debug.Log("Wipe");
                 }
             }
@@ -76,12 +77,13 @@ public class ShieldTrigger : MonoBehaviour
                 enemyState = ShieldState.Yellow;
                 if (shieldState == enemyState)
                 {
-                    //other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
-                    //other.gameObject.GetComponent<EnemyMovement>().speed = 0;
+                    other.gameObject.GetComponent<SphereCollider>().enabled = false;
+                    other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    other.gameObject.GetComponent<EnemyMovement>().enabled = false;
+                    other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
+                    other.gameObject.GetComponent<EnemyMovement>().speed = 0;
 
-                    //yield return new WaitForSeconds(1);
-
-                    Destroy(other.gameObject);
+                    yield return new WaitForSeconds(1);
                     Debug.Log("wipeY");
                 }
             }
@@ -91,12 +93,15 @@ public class ShieldTrigger : MonoBehaviour
                 enemyState = ShieldState.Green;
                 if (shieldState == enemyState)
                 {
+                    other.gameObject.GetComponent<SphereCollider>().enabled = false;
+                    other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    other.gameObject.GetComponent<EnemyMovement>().enabled = false;
                     other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
                     other.gameObject.GetComponent<EnemyMovement>().speed = 0;
 
                     yield return new WaitForSeconds(1);
 
-                    Destroy(other.gameObject);
+ 
                     Debug.Log("Wipeg");
                 }
             }
