@@ -8,5 +8,4 @@ public class EnemyStats : MonoBehaviour
     public float speed;
     public float scoreValue;
     public int enemyType;
-
 }

@@ -14,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
 
     public bool halfDamage;
 
+    public EnemyDeathAnimation EDA;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
