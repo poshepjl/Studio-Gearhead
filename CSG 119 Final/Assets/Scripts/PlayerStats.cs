@@ -20,11 +20,17 @@ public class PlayerStats : MonoBehaviour
 
     private Manager manager;
 
+    [HideInInspector] public AudioSource audioSource;
+
     private void Start()
     {
+        Time.timeScale = 1;
+
         currentHealth = maxHealth;
 
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -69,7 +75,14 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             sr.sprite = sprites[4];
-
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        Debug.Log("Committing Scooter Ankle");
+        Time.timeScale = 0;
+        manager.GameOver();
     }
 }

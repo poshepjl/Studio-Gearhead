@@ -23,6 +23,7 @@ public class EnemyDeathAnimation : MonoBehaviour
         anim.SetBool("dead", dead);
         StartCoroutine(TorrelsYeetFix());
     }
+
     IEnumerator TorrelsYeetFix()
     {
         var info = anim.GetCurrentAnimatorClipInfo(0);

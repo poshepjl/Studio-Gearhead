@@ -19,6 +19,10 @@ public class ShieldTrigger : MonoBehaviour
     public ShieldState shieldState;
     public ShieldState enemyState;
 
+    public Color blue;
+    public Color yellow;
+    public Color green;
+
     void Start()
     {
         theShield = GetComponent<CapsuleCollider>();
@@ -29,21 +33,24 @@ public class ShieldTrigger : MonoBehaviour
         {
             shieldState = ShieldState.Green;
             shieldImage.sprite = differentShields[1];
-            shieldColor.color = new Color32(0, 255, 0, 255);
+            shieldColor.color = green;
+            shieldImage.color = green;
             return;
         }
         if (shieldState == ShieldState.Green)
         {
             shieldState = ShieldState.Yellow;
             shieldImage.sprite = differentShields[2];
-            shieldColor.color = new Color32(255, 255, 0, 255);
+            shieldColor.color = yellow;
+            shieldImage.color = yellow;
             return;
         }
         if (shieldState == ShieldState.Yellow)
         {
             shieldState = ShieldState.Blue;
             shieldImage.sprite = differentShields[0];
-            shieldColor.color = new Color32(0, 0, 255, 255);
+            shieldColor.color = blue;
+            shieldImage.color = blue;
             return;
         }
     }
