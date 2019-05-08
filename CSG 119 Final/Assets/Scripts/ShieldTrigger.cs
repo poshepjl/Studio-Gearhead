@@ -47,15 +47,26 @@ public class ShieldTrigger : MonoBehaviour
             return;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.transform.root.name != "Player")
         {
+            if (shieldState != enemyState)
+            {
+                partPass.SetActive(true);
+                StartCoroutine(DisablePart());
+            }
+
             if (other.tag == "Blue")
             {
                 enemyState = ShieldState.Blue;
                 if (shieldState == enemyState)
                 {
+                    other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
+                    other.gameObject.GetComponent<EnemyMovement>().speed = 0;
+
+                    yield return new WaitForSeconds(1);
+
                     Destroy(other.gameObject);
                     Debug.Log("Wipe");
                 }
@@ -65,6 +76,11 @@ public class ShieldTrigger : MonoBehaviour
                 enemyState = ShieldState.Yellow;
                 if (shieldState == enemyState)
                 {
+                    //other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
+                    //other.gameObject.GetComponent<EnemyMovement>().speed = 0;
+
+                    //yield return new WaitForSeconds(1);
+
                     Destroy(other.gameObject);
                     Debug.Log("wipeY");
                 }
@@ -75,15 +91,14 @@ public class ShieldTrigger : MonoBehaviour
                 enemyState = ShieldState.Green;
                 if (shieldState == enemyState)
                 {
+                    other.gameObject.GetComponent<EnemyMovement>().EDA.PlayDeathAnim();
+                    other.gameObject.GetComponent<EnemyMovement>().speed = 0;
+
+                    yield return new WaitForSeconds(1);
+
                     Destroy(other.gameObject);
                     Debug.Log("Wipeg");
                 }
-            }
-
-            if (shieldState != enemyState)
-            {
-                partPass.SetActive(true);
-                StartCoroutine(DisablePart());
             }
 
 
