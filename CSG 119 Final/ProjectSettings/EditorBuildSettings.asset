@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dev Torrel.unity
     guid: b7e418057be38494b8195b45f53e07af
+  - enabled: 1
+    path: Assets/Scenes/Test.unity
+    guid: 91a606d13df07ca4cb5bd0df9aab1cde
   m_configObjects: {}
