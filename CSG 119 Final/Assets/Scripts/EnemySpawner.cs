@@ -18,4 +18,9 @@ public class EnemySpawner : MonoBehaviour
         //instantiate the picked enemy
         GameObject e = Instantiate(enemies[n], transform.position, Quaternion.identity);
     }
+
+    public void TutorialSpawn(GameObject enemyType)
+    {
+        GameObject e = Instantiate(enemyType, transform.position, Quaternion.identity);
+    }
 }

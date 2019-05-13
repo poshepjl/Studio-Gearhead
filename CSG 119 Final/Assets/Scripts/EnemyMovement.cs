@@ -18,6 +18,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void Awake()
     {
+        speed = GetComponent<EnemyStats>().speed;
+
         player = GameObject.FindGameObjectWithTag("Player");
         playerPosition = player.GetComponent<Transform>().position;
 
