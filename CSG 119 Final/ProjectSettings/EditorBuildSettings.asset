@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 91a606d13df07ca4cb5bd0df9aab1cde
+  - enabled: 1
+    path: Assets/Scenes/Dream Battle.unity
+    guid: 2d4556facef88184a96b7c9a1d785098
+  - enabled: 1
+    path: Assets/Scenes/Zombie.unity
+    guid: 70cba0b12f90de247a81aba272fc0891
+  - enabled: 1
+    path: Assets/Scenes/Mech.unity
+    guid: e33264e1ffa63c249a5bdbcdbc04214b
   m_configObjects: {}
