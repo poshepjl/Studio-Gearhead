@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mech.unity
     guid: e33264e1ffa63c249a5bdbcdbc04214b
+  - enabled: 1
+    path: Assets/Scenes/Plants.unity
+    guid: 4b7dce1fa8f033545ab2a9f0d2f253e3
   m_configObjects: {}
