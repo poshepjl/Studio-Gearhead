@@ -3184,18 +3184,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342863658}
   m_CullTransparentMesh: 0
---- !u!114 &1370846472 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3085397952143026051, guid: 242cdff7dc31cd94da877950e70e4c4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 3085397953507398283}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c17b827a194a644af9ee241316ed1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1374861618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5368,11 +5356,11 @@ PrefabInstance:
       propertyPath: shieldColor
       value: 
       objectReference: {fileID: 8555707645638044252}
-    - target: {fileID: 982654663451880799, guid: 242cdff7dc31cd94da877950e70e4c4e,
+    - target: {fileID: 3085397952580413687, guid: 242cdff7dc31cd94da877950e70e4c4e,
         type: 3}
-      propertyPath: valueMove
-      value: 
-      objectReference: {fileID: 8555707645463451615}
+      propertyPath: activeLength
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 982654663451880789, guid: 242cdff7dc31cd94da877950e70e4c4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5438,8 +5426,25 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 8555707647333212657}
+    - target: {fileID: 3085397953507398285, guid: 242cdff7dc31cd94da877950e70e4c4e,
+        type: 3}
+      propertyPath: activeLength
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 242cdff7dc31cd94da877950e70e4c4e, type: 3}
+--- !u!114 &3085397953507398285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3085397953507398285, guid: 242cdff7dc31cd94da877950e70e4c4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3085397953507398283}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c17b827a194a644af9ee241316ed1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8555707645463451612
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5963,7 +5968,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1370846472}
+      - m_Target: {fileID: 3085397953507398285}
         m_MethodName: UseTargetModification
         m_Mode: 1
         m_Arguments:

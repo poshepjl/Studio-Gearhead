@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
             other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<AudioSource>().clip);
 
             if (halfDamage == true)
-                player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage / 2;
+                player.GetComponent<PlayerStats>().currentHealth -= 0;
             else
                 player.GetComponent<PlayerStats>().currentHealth -= GetComponent<EnemyStats>().damage;
             player.GetComponent<PlayerStats>().UpdateHealthSlider();

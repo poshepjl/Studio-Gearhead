@@ -58,11 +58,6 @@ public class ShieldTrigger : MonoBehaviour
     {
         if (other.transform.root.name != "Player")
         {
-            if (shieldState != enemyState)
-            {
-                partPass.SetActive(true);
-                StartCoroutine(DisablePart());
-            }
 
             if (other.tag == "Blue")
             {
@@ -116,11 +111,5 @@ public class ShieldTrigger : MonoBehaviour
 
        //     Debug.Log("Shield // " + Time.time);
         }
-    }
-
-    IEnumerator DisablePart()
-    {
-        yield return new WaitForSeconds(0.1f);
-        partPass.SetActive(false);
     }
 }
